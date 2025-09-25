@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>The Clips Agency</title>
+  <meta name="description"
+    content="If you’re a busy creator with no time to edit or post consistently on social media but still recognize the need to grow your brand faster, then we are for you." />
+  <meta property="og:title" content="The Clips Agency" />
+  <meta property="og:description" content="If you’re a busy creator with no time to edit..." />
+  <meta property="og:image" content="https://cdn.prod.website-files.com/.../og-img.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Styles -->
+  <link rel="stylesheet"
+    href="https://cdn.prod.website-files.com/67025756be96d71592e4ec7d/css/tca2.shared.365ae3ccb.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- fonts / head small scripts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
+  <script defer src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script defer>
+    // small head utility; safe deferred
+    WebFont && WebFont.load && WebFont.load({ google: { families: ["Inter:100,200,300,regular,500,600,700,800,900"] } });
+  </script>
+  <style>
+    /* keep the small inline CSS that you had */
+    .swiper {
+      height: 100% !important;
+    }
+
+    ::-webkit-scrollbar {
+      width: 0;
+      background: transparent;
+    }
+
+    .swiper-slide {
+      height: auto !important;
+    }
+
+    .swiper-slide.testimonial_content {
+      width: 50% !important;
+      max-width: 61.625rem;
+    }
+
+    @media screen and (max-width:479px) {
+      .swiper-slide.testimonial_content {
+        width: 80% !important;
+      }
+    }
+
+    .swiper-slide.project_content {
+      width: 19.1875rem !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <!-- Vendor libs: load in order; use one jQuery only -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+  <!-- UI / animation / helpers -->
+  <script defer src="https://player.vimeo.com/api/player.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
+  <!-- Optional: respond.io / other widgets (only include 1 copy) -->
+  <!-- <script defer id="respondio__growth_tool" src="https://cdn.respond.io/widget/widget.js?wId=YOUR_WIDGET_ID"></script> -->
+
+  <!-- Optional: analytics - COMMENTED for local dev (enable in prod as needed) -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXX"></script> -->
+
+  <!-- Inline initialization: guarded & runs after load -->
+  <script defer>
+    window.addEventListener('load', function () {
+      try {
+        // jQuery-dependent initializers - only run if jQuery is present
+        if (window.jQuery) {
+          // nav-link close
+          try { $('.nav-link').on('click', function () { $('.close').click(); }); } catch (e) { }
+          // counterUp if loaded (if you re-enable plugin)
+          try { if ($.fn && typeof $.fn.counterUp === 'function') { $('.counter').counterUp({ delay: 10, time: 2000 }); $('.counter').addClass('animated fadeInDownBig'); } } catch (e) { }
+        }
+
+        // Lenis init if present
+        if (window.Lenis) {
+          try {
+            const lenis = new Lenis({ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), direction: 'vertical', smooth: true });
+            lenis.on('scroll', () => { });
+            function raf(t) { lenis.raf(t); requestAnimationFrame(raf); }
+            requestAnimationFrame(raf);
+          } catch (e) { }
+        }
+
+        // Swiper init (guarded)
+        try {
+          if (window.Swiper && document.querySelectorAll) {
+            document.querySelectorAll('.swiper_main_component').forEach(function (el) {
+              const node = el.querySelector('.swiper');
+              if (node) new Swiper(node, { speed: 500, loop: true, slidesPerView: 'auto', centeredSlides: true });
+            });
+          }
+        } catch (e) { }
+      } catch (e) { console.warn('init error', e); }
+    });
+  </script>
+
+  <!-- Finally load React entry AFTER vendors if your page relies on them.
+       If your React components depend on these libs being present during mount,
+       keeping main.jsx after vendors is the right choice. If your React app
+       should control everything inside #root, you can also load main.jsx before
+       vendors and then call plugin init from React (preferred long-term).
+  -->
+  <script type="module" src="/src/main.jsx"></script>
+
+</body>
+
+</html>

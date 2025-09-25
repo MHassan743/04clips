@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(8, 8, 32);
+    position: relative;
+    overflow: hidden;
+}
+.bub{
+    width: 60px;
+    height: 60px;
+    border: 1px solid white;
+    box-shadow: inset 1px -1px 5px white;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+    position: absolute;
+    bottom: -70px;
+    animation: bub 3s ease-in infinite;
+}
+.bub::before{
+    position: absolute;
+    content: " ";
+    background-color: white;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    right: 13px;
+    top: 15%;
+    left: 13%;
+    box-shadow: 0px 0px 10px white;
+}
+.bub.a{
+    left: 10%;
+    animation: bub 2s ease-in 1s infinite;
+}
+.bub.b{
+    left: 20%;
+    animation: bub 1.5s ease-in 1.4s infinite;
+}
+.bub.c{
+    left: 3%;
+    animation: bub 5s ease-in 3.8s infinite;
+}
+
+.bub.d{
+    left: 40%;
+    animation: bub 1.8s ease-in .5s infinite;
+}
+.bub.e{
+    left: 75%;
+    animation: bub 2.3s ease-in 2.5s infinite;
+}
+.bub.f{
+    left: 90%;
+    animation: bub 2.5s ease-in 3s infinite;
+}
+.bub.g{
+    left: 60%;
+    animation: bub 2.2s ease-in 2s infinite;
+}
+.bub.k{
+    left: 50%;
+    animation: bub 1.6s ease-in 2s infinite;
+}
+.bub.i{
+    left: 65%;
+    animation: bub 1.8s ease-in 2.1s infinite;
+}
+.bub.j{
+    left: 5%;
+    animation: bub 3.5s ease-in 1.5s infinite;
+}
+.bub.h{
+    left: 72%;
+    animation: bub 1.5s ease-in 1s infinite;
+}
+@keyframes bub{
+    0%{
+        opacity: 0;
+    }
+    10%, 93%{
+        opacity: 1;
+    }
+    100%{
+        transform: translate(90px,-700px);
+        display: none;
+    }
+}
