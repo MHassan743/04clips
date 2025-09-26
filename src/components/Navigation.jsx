@@ -83,7 +83,7 @@ const Navigation = () => {
                         <img
                             loading="lazy"
                             src="/src/assets/irmedia.png"
-                            alt="The media agency"
+                            alt=""
                             className="nav-logo"
                         />
                     </Link>
