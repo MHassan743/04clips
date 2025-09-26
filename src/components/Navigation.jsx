@@ -82,7 +82,7 @@ const Navigation = () => {
                     >
                         <img
                             loading="lazy"
-                            src="04clips/src/assets/irmedia.png"
+                            src="/assets/irmedia.png"
                             alt="The Clips Agency"
                             className="nav-logo"
                         />
