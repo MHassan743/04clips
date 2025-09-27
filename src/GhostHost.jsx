@@ -2148,7 +2148,7 @@ const GhostHost = () => {
                   data-default-duration={0}
                   data-duration={0}
                 >
-                 <img src={'public/Arrow.gif'} height={50} alt="Animated GIF" />
+                 <img src={'/Arrow.gif'} height={50} alt="Animated GIF" />
                 </div>
                 <h3 className="heading-14 animated fadeIn">
                   Grow on all social media channels
