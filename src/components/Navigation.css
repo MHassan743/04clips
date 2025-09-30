@@ -1,0 +1,82 @@
+/* Additional CSS for React Router Navigation fixes */
+
+/* Ensure dropdown functionality works */
+.w-dropdown.w--open .w-dropdown-list,
+.dropdown.w--open .dropdown-list {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0);
+}
+
+.w-dropdown .w-dropdown-list,
+.dropdown .dropdown-list {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+}
+
+/* Ensure dropdown positioning */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 9999;
+  min-width: 200px;
+}
+
+/* Dropdown toggle cursor */
+.nav-dropdown.w-dropdown-toggle {
+  cursor: pointer;
+}
+
+/* Fix for hover states on links */
+.nav-link-2.w--current,
+.dropdown-link.w--current {
+  color: #fff !important;
+}
+
+/* Make dropdown items more visible */
+.dropdown-list .dropdown-link {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-list .dropdown-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile menu fixes */
+.w-nav-menu.w--open {
+  display: block !important;
+}
+
+/* Hide FAQ links by default and show on specific pages */
+.faq-gh, .faq-credits, .faq-pp {
+  display: none !important;
+}
+
+.faq-gh:not(.hide) {
+  display: inline-block !important;
+}
+
+.faq-credits:not(.hide) {
+  display: inline-block !important;
+}
+
+.faq-pp:not(.hide) {
+  display: inline-block !important;
+}
+.nav-logo{
+  border-radius: 50px;
+  height: 80px;
+  width: 80px;
+}
