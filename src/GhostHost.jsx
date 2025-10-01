@@ -2148,7 +2148,7 @@ const GhostHost = () => {
                   data-default-duration={0}
                   data-duration={0}
                 >
-                 <img src={'/src/assets/Arrow.gif'} height={50} alt="Animated GIF" />
+                 <img src={'/Arrow.gif'} height={50} alt="Animated GIF" />
                 </div>
                 <h3 className="heading-14 animated fadeIn">
                   Grow on all social media channels
@@ -2169,7 +2169,7 @@ const GhostHost = () => {
                   data-default-duration="1.3"
                   data-duration={0}
                 >
-                  <img src={'/src/assets/star.gif'} height={50} alt="Animated GIF" />
+                  <img src={'/star.gif'} height={50} alt="Animated GIF" />
                 </div>
                 <h3 className="heading-14 animated fadeIn">
                   Get more leads to your business
