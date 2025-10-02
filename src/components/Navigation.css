@@ -50,9 +50,6 @@
   transition: background-color 0.2s ease;
 }
 
-.dropdown-list .dropdown-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
 
 /* Mobile menu fixes */
 .w-nav-menu.w--open {
