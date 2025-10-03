@@ -75,6 +75,11 @@
   width: 80px;
 }
 @media (max-width: 768px) {
+  .button-3 {
+    display: none !important;
+  }
+}
+@media (max-width: 768px) {
   .dropdown-list {
     min-width: 150px;
   }
