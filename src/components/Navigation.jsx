@@ -227,7 +227,7 @@ const Navigation = () => {
         rel="noopener noreferrer"
         aria-label="Open WhatsApp chat"
       >
-        <img src="/whatsapp.jpeg" alt="WhatsApp" />
+        <img src="/whatsapp icon.jpeg" alt="WhatsApp" />
       </a>
     </>
   );
