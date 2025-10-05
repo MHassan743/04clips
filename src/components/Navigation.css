@@ -126,7 +126,6 @@
   /* Purplish background for selected items */
   .nav-link-2.w--current,
   .dropdown-link.w--current {
-    background-color: #800080 !important; /* Purplish background */
     color: #fff !important; /* White text */
   }
 }
