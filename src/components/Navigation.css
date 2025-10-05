@@ -1,0 +1,192 @@
+/* Additional CSS for React Router Navigation fixes */
+
+/* Ensure dropdown functionality works */
+.w-dropdown.w--open .w-dropdown-list,
+.dropdown.w--open .dropdown-list {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0);
+}
+
+.w-dropdown .w-dropdown-list,
+.dropdown .dropdown-list {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+}
+
+/* Ensure dropdown positioning */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 9999;
+  min-width: 200px;
+}
+
+/* Dropdown toggle cursor */
+.nav-dropdown.w-dropdown-toggle {
+  cursor: pointer;
+}
+
+/* Fix for hover states on links */
+.nav-link-2.w--current,
+.dropdown-link.w--current {
+  color: #fff !important;
+}
+
+/* Make dropdown items more visible */
+.dropdown-list .dropdown-link {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-list .dropdown-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile menu fixes */
+.w-nav-menu.w--open {
+  display: block !important;
+}
+
+/* Ensure consistent font size for mobile menu */
+.w-nav-menu.w--open .nav-link-2 {
+  font-size: 16px; /* Adjust as needed */
+  transition: font-size 0.2s ease;
+}
+
+/* Ensure consistent font size for nested menus in mobile menu */
+.w-nav-menu.w--open .dropdown-list .dropdown-link {
+  font-size: 16px; /* Adjust as needed */
+  transition: font-size 0.2s ease;
+}
+
+/* Hide FAQ links by default and show on specific pages */
+.faq-gh, .faq-credits, .faq-pp {
+  display: none !important;
+}
+
+.faq-gh:not(.hide) {
+  display: inline-block !important;
+}
+
+.faq-credits:not(.hide) {
+  display: inline-block !important;
+}
+
+.faq-pp:not(.hide) {
+  display: inline-block !important;
+}
+
+.nav-logo{
+  border-radius: 50px;
+  height: 80px;
+  width: 80px;
+  object-fit: contain;
+  height: auto;
+  width: auto;
+  max-height: 80px; /* Adjust as needed */
+  max-width: 80px; /* Adjust as needed */
+}
+
+/* Hide 'Book a call' button on small screens */
+@media (max-width: 768px) {
+  .button-3 {
+    display: none !important;
+  }
+}
+
+/* Mobile menu positioning and width */
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;
+  }
+
+  .w-nav-menu.w--open {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+    z-index: 1000;
+    display: block !important;
+  }
+
+  /* Purplish background for selected items */
+  .nav-link-2.w--current,
+  .dropdown-link.w--current {
+    background-color: #800080 !important; /* Purplish background */
+    color: #fff !important; /* White text */
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .dropdown-list {
+    min-width: 150px;
+  }
+
+  .dropdown-list .dropdown-link {
+    padding: 6px 12px;
+  }
+
+  .nav-logo {
+    height: 60px;
+    width: 60px;
+  }
+
+  /* Responsive styles for h2 headings */
+  h2 {
+    font-size: 1.5rem; /* Adjust as needed */
+  }
+}
+
+@media (max-width: 480px) {
+  .dropdown-list {
+    min-width: 120px;
+  }
+
+  .dropdown-list .dropdown-link {
+    padding: 4px 8px;
+  }
+
+  .nav-logo {
+    height: 50px;
+    width: 50px;
+  }
+
+  h2 {
+    font-size: 1.2rem; /* Adjust as needed */
+  }
+}
+
+/* Ensure global styles for h2 headings */
+h2 {
+  font-size: 2rem; /* Default size */
+}
+
+/* Prevent menu button from shifting */
+.menu-button {
+  position: relative;
+  transition: none;
+  z-index: 1001;
+}
+
+/* Ensure each menu option takes the whole line */
+.w-nav-menu.w--open .nav-link-2,
+.w-nav-menu.w--open .dropdown-link {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
