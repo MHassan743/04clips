@@ -93,7 +93,7 @@ h2 {
 }
 
 /* Very small screens (e.g. 320px wide) — ensure section headings are readable */
-@media (max-width: 360px) {
+@media (max-width: 460px) {
   .title-wrapper .section-heading.center,
   .title-wrapper .section-heading,
   .section-heading.center,
