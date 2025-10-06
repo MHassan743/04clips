@@ -98,7 +98,7 @@ h2 {
   .title-wrapper .section-heading,
   .section-heading.center,
   .section-heading {
-    font-size: 3rem !important; /* larger minimum for tiny screens */
+    font-size: 2rem !important; /* larger minimum for tiny screens */
     line-height: 1.15 !important;
   }
 }
