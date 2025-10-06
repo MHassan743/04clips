@@ -88,7 +88,7 @@ h2 {
 @media (max-width: 480px) {
   .section-heading,
   h2 {
-    font-size: clamp(1.4rem, 5vw, 1.8rem);
+    font-size: clamp(1.6rem, 5vw, 1.9rem);
   }
 }
 
@@ -98,7 +98,7 @@ h2 {
   .title-wrapper .section-heading,
   .section-heading.center,
   .section-heading {
-    font-size: 8rem !important; /* larger minimum for tiny screens */
+    font-size: 6rem !important; /* larger minimum for tiny screens */
     line-height: 1.15 !important;
   }
 }
